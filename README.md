@@ -17,6 +17,7 @@ This is a solution to the News homepage challenge on Frontend Mentor. Frontend M
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- JavaScript
 - Mobile-first workflow
 
 
