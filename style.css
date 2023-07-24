@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap);
+:root{
+    --softOrange: hsl(35, 77%, 62%);
+    --softRed: hsl(5, 85%, 63%);
+    --offWhite:hsl(36, 100%, 99%);
+    --grayishBlue:hsl(233, 8%, 79%);
+    --darkGrayishBlue:hsl(236, 13%, 42%);
+    --veryDarkBlue:hsl(240, 100%, 5%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.visual >img:first-child{
+    display: none;
+}
+
+body{
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.logo >img,
+.menu-btn >img{
+    max-width: 20vw;
+    height: auto;
+}
+
+.menu{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    width: 70%;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+}
+
+.menu-close-btn >img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.5rem;
+}
+
+.menu >ul{
+    padding-top: 30%;
+    padding-left: 2rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-list .link >a{
+    text-decoration: none;
+    color: var(--veryDarkBlue);
+    font-weight: 700;
+}
+
+.visual >img:nth-child(2){
+    max-width: 100%;
+}
+
+.content-txt >h1{
+    font-weight: 800;
+    width: 70%;
+    color: var(--veryDarkBlue);
+    margin: 1rem 0;
+}
+
+.txt >p{
+    color: var(--darkGrayishBlue);
+    margin: 1rem 0;
+    max-width: 95%;
+}
+
+.txt >button{
+    min-width: 50%;
+    color: var(--offWhite);
+    padding: .7rem 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: var(--softRed);
+    letter-spacing: 5px;
+    border: none;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+}
+
+.side-section{
+    background-color: var(--veryDarkBlue);
+    color: var(--offWhite);
+    padding: 1rem;
+
+}
+
+.side-section >h3{
+    color: var(--softOrange);
+}
+
+.news{
+    padding: 1.5rem 0;
+    border-bottom: hsl(236, 13%, 42%) solid 1px;
+}
+
+.news >p{
+    margin-top: .5rem;
+    color: var(--grayishBlue);
+    font-size: .8rem;
+}
+
+.news:last-child{
+    border: none;
+}
+
+.recent{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.blog-card{
+    display: flex;
+    align-items: center;
+}
+
+.card-content{
+    width: 70%;
+}
+
+.card-content >h1{
+    color: var(--grayishBlue);
+}
+
+.card-content >h4{
+    color: var(--veryDarkBlue);
+    margin: .3rem 0;
+}
+
+.card-content >p{
+    color: var(--darkGrayishBlue);
+}
+
+.card-img >img{
+    max-width: 5rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+@media (min-width:700px){
+    .visual >img:last-child{
+        display: none;
+    }
+    .visual >img:first-child{
+        display: block;
+        width: 100%;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .content{
+        width: 65%;
+    }
+    .side-section{
+        width: 32%;
+        font-size: clamp(.5rem, 2vw, 3rem);
+    }
+    
+    .content-txt{
+        height: 45%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .content-txt >h1{
+        width: 40%;
+        font-size: clamp(2rem, 3.5vw, 3rem);
+    }
+    .content-txt .txt{
+        width: 50%;
+        text-align: justify;
+        font-size: clamp(.5rem, 1.5vw, 1rem);
+    }
+    .recent{
+        flex-direction: row;
+    }
+    
+}
+
+@media(max-width:1055px){
+    .recent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:700px){
+    .recent{
+        display: flex;
+        
+    }
+}
